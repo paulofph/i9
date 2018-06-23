@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
-import Button from '@material-ui/core/Button';
-
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import './index.css';
 
 class App extends Component {
   render() {
