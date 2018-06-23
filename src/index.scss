@@ -1,5 +1,8 @@
 @import './style/pflex/pflex.scss';
+$color-white: #ececec;
+$color-green: #00FF00;
+$color-blue: #0000FF;
 
 .white-text{
-    color: white !important;
+    color: $color-white !important;
 }

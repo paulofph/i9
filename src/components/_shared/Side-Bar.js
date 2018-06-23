@@ -18,14 +18,29 @@ class SideBar extends Component {
           <img src={profilePhoto} alt="" height="90px" style={{borderRadius: '50%'}}/>
         </div>
 
-        <hr className="ml+ mr+" />
+        <hr className="ml+ mr+ mt+ mb+" />
         
         {/*  Options */}
-        <div className="pflex-row pt+ pb+">
-          <MaterialIcon icon="dashboard" color='#7bb92f'/>
-          <Typography variant="body2" gutterBottom className="white-text">
-            Display 4
-          </Typography>
+        <div className="pflex-row">
+          <span className="pl+ pr">
+            <MaterialIcon icon="dashboard" color='#ececec'/>
+          </span>
+          <span>
+            <Typography variant="body2" gutterBottom className="white-text">
+              Display 4
+            </Typography>
+          </span>
+        </div>
+
+        <div className="pflex-row">
+          <span className="pl+ pr">
+            <MaterialIcon icon="dashboard" color='#ececec'/>
+          </span>
+          <span>
+            <Typography variant="body2" gutterBottom className="white-text">
+              Display 4
+            </Typography>
+          </span>
         </div>
 
       </div>
