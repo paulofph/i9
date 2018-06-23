@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './../../assets/logos/logo.png';
 import profilePhoto from './../../assets/photos/paulo.jpg';
 import Typography from '@material-ui/core/Typography';
+import MaterialIcon, {colorPallet} from 'material-icons-react';
 
 class SideBar extends Component {
   render() {
@@ -21,10 +22,7 @@ class SideBar extends Component {
         
         {/*  Options */}
         <div className="pflex-row pt+ pb+">
-
-          <Typography variant="body2" gutterBottom className="white-text">
-            Display 4
-          </Typography>
+          <MaterialIcon icon="dashboard" color='#7bb92f'/>
           <Typography variant="body2" gutterBottom className="white-text">
             Display 4
           </Typography>
