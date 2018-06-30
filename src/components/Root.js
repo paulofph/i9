@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './_shared/Side-Bar'
 import LandingPage from './landing-page/Landing-Page'
+import IdeasList from './ideas/ideas-list/Ideas-List'
 import App from './../App'
 import './../index.scss'
 
@@ -19,7 +20,7 @@ const Root = ({ store }) => (
         <Router>
           <div className="full-page pt+ pb+ pl+"> 
             <Route exact path="/" component={App} />
-            <Route path="/ideas" component={LandingPage} />
+            <Route path="/ideas" component={IdeasList} />
           </div>
         </Router>
       </Provider>

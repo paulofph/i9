@@ -5,7 +5,9 @@ import reducers from './reducers/reducers'
 import Root from './components/Root'
 import 'typeface-roboto'
 
-const store = createStore(reducers)
+import configureStore from './_config/configureStore'
+
+const store = configureStore();
 
 render(
   <Root store={store} />,

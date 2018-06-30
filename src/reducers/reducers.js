@@ -5,17 +5,29 @@ import {
   RECEIVE_IDEAS
 } from './../actions/actions'
 
-function selectIdea(state = null, action){
+const defaultState = {
+  ideas: {}
+};
+
+function ideas(state = null, action){
+  console.log(2, action);
   switch(action.type){
-    case SELECT_IDEA:
-      return action.post;
+    case RECEIVE_IDEAS:
+      console.log(2, action);
+      return Object.assign(
+                {}, 
+                state, 
+                {
+                  ideas: action.ideas
+                }
+             );
     default:
       return state;
   }
 }
 
 const rootReducer = combineReducers({
-  selectIdea
+  ideas
 })
   
 export default rootReducer

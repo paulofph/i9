@@ -1,4 +1,4 @@
-// import fetch from 'cross-fetch';
+import fetch from 'cross-fetch';
 
 /*
  * action types
@@ -23,10 +23,10 @@ export const VisibilityFilters = {
  * action creators
  */
 /* sync */
-export function selectIdea(idea) {
+export function selectIdea() {
+  console.log("action");
   return {
-    type: SELECT_IDEA,
-    idea
+    type: SELECT_IDEA
   }
 }
 
@@ -46,26 +46,21 @@ function requestIdeas(idea) {
   }
 }
 
-function receiveIdeas(idea, json) {
+function receiveIdeas(json) {
+  console.log(3, json);
   return {
     type: RECEIVE_IDEAS,
-    idea,
-    ideas: json.data.children.map(child => child.data),
+    ideas: json,
     receivedAt: Date.now()
   }
 }
 
-export function fetchPosts(idea) {
-  return function (dispatch) {
-    dispatch(requestIdeas('x'));
-    
-    return fetch(`https://www.reddit.com/r/x.json`)
-      .then(
-        response => response.json(),
-        error => console.log('An error occurred.', error)
-      )
-      .then( json => 
-        dispatch(receiveIdeas('idea', json))
-      )
+export function fetchIdeas() {
+
+  return dispatch => {
+    // dispatch(requestPosts(subreddit))
+    return fetch(`http://localhost:3000/api/Ideas`)
+      .then(response => response.json())
+      .then(json => dispatch(receiveIdeas(json)))
   }
 }
