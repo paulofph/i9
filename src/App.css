@@ -3322,3 +3322,13 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+.full-page {
+  width: 100% !important;
+  height: 100% !important; }
+
+.gradient-header {
+  background: linear-gradient(to right, #163837, #266890); }
+
+.light-font {
+  font: #f4f4f4 !important; }

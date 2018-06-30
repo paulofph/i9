@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SideBar from './_shared/Side-Bar'
+import LandingPage from './landing-page/Landing-Page'
 import App from './../App'
-
 import './../index.scss'
 
 const Root = ({ store }) => (
@@ -14,10 +14,13 @@ const Root = ({ store }) => (
         <SideBar />
       </div>
 
-      <div className="pflex-column pflex-20p">
+      <div className="pflex-column pflex-80p">
       <Provider store={store}>
         <Router>
-          <Route path="/:filter?" component={App} />
+          <div className="full-page pt+ pb+ pl+"> 
+            <Route exact path="/" component={App} />
+            <Route path="/ideas" component={LandingPage} />
+          </div>
         </Router>
       </Provider>
       </div>

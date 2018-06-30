@@ -1,5 +1,12 @@
 @import './style/pflex/pflex.scss';
 
+
+$color-primary: #163837;
+$color-secondary: #266890;
+$color-danger: #f53d3d;
+$color-light: #f4f4f4;
+$color-dark: #222;
+
 .App {
   text-align: center;
 }
@@ -27,4 +34,17 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.full-page {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.gradient-header{
+  background: linear-gradient(to right, $color-primary , $color-secondary);
+}
+
+.light-font{
+  font: #f4f4f4 !important;
 }

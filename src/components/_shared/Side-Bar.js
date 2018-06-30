@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './../../assets/logos/logo.png';
 import profilePhoto from './../../assets/photos/paulo.jpg';
 import Typography from '@material-ui/core/Typography';
-import MaterialIcon, {colorPallet} from 'material-icons-react';
+import MaterialIcon from 'material-icons-react';
 
 class SideBar extends Component {
   render() {
@@ -27,7 +27,7 @@ class SideBar extends Component {
           </span>
           <span>
             <Typography variant="body2" gutterBottom className="white-text">
-              Display 4
+              Página Inicial
             </Typography>
           </span>
         </div>
@@ -38,7 +38,7 @@ class SideBar extends Component {
           </span>
           <span>
             <Typography variant="body2" gutterBottom className="white-text">
-              Display 4
+              Ideias
             </Typography>
           </span>
         </div>
