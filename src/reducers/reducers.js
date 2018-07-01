@@ -6,28 +6,31 @@ import {
 } from './../actions/actions'
 
 const defaultState = {
-  ideas: {}
+
 };
 
-function ideas(state = null, action){
-  console.log(2, action);
+function ideasReducer(state = defaultState, action){
   switch(action.type){
-    case RECEIVE_IDEAS:
-      console.log(2, action);
-      return Object.assign(
-                {}, 
-                state, 
-                {
-                  ideas: action.ideas
-                }
-             );
+    case RECEIVE_IDEAS:{
+      const futureState = Object.assign(
+        {}, 
+        state, 
+        {
+          ideas: action.ideas
+        }
+     );
+      console.log(1.1, state);
+      console.log(1.2, futureState);
+      console.log(1.3, action.ideas);
+      return futureState;
+    }
     default:
       return state;
   }
 }
 
 const rootReducer = combineReducers({
-  ideas
+  ideasReducer
 })
   
 export default rootReducer

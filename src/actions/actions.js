@@ -24,7 +24,6 @@ export const VisibilityFilters = {
  */
 /* sync */
 export function selectIdea() {
-  console.log("action");
   return {
     type: SELECT_IDEA
   }
@@ -47,7 +46,13 @@ function requestIdeas(idea) {
 }
 
 function receiveIdeas(json) {
-  console.log(3, json);
+  
+  const action = {
+    type: RECEIVE_IDEAS,
+    ideas: json,
+    receivedAt: Date.now()
+  }
+  console.log(4, action)
   return {
     type: RECEIVE_IDEAS,
     ideas: json,
@@ -56,7 +61,7 @@ function receiveIdeas(json) {
 }
 
 export function fetchIdeas() {
-
+  console.log(5);
   return dispatch => {
     // dispatch(requestPosts(subreddit))
     return fetch(`http://localhost:3000/api/Ideas`)

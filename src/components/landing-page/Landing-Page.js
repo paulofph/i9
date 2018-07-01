@@ -15,7 +15,6 @@ class LandingPage extends Component {
     super(props);
     this.handleChange = this.name();
     this.handleRefreshClick = this.name();
-    console.log(props);
   }
 
   componentDidMount() {

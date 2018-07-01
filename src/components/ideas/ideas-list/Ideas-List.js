@@ -18,19 +18,23 @@ class IdeasList extends Component {
 
   render() {
     const { selectedSubreddit, ideas, isFetching, lastUpdated } = this.props
-    console.log(1, this.props)
+    console.log(3, this.props)
     return (
-        <div>"IdeasList"</div>
+        <div >
+          { this.props.ideas && 
+            <ul>
+              {/* {this.props.ideas.ideas.map((post, i) => <li key={i}>{post.title}</li>)}   */}
+            </ul>
+          }
+        </div>
     );
   }
 }
 
 
 function mapStateToProps(state) {
-  
-  console.log(state);
-  const { ideas } = state
-
+  console.log(2, state);
+  const ideas = state.ideas;
   return {
     ideas
   }
