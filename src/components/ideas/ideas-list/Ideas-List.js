@@ -4,6 +4,7 @@ import {
     fetchIdeas
 } from './../../../actions/actions'
 import './../../../App.css';
+import HeaderBar from './../../_shared/Header-Bar'
 
 class IdeasList extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class IdeasList extends Component {
     console.log(3, this.props)
     return (
         <div >
+          <HeaderBar />
           { this.props.ideas && 
             <ul>
               {/* {this.props.ideas.ideas.map((post, i) => <li key={i}>{post.title}</li>)}   */}

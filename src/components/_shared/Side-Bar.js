@@ -10,12 +10,12 @@ class SideBar extends Component {
       <div>
         {/* Logo */}
         <div className="pflex-row pflex-center pt+ pb+">
-          <img src={logo} alt="Peers CAPX Enterprise" height="70px"/>
+          {/* <img src={logo} alt="Peers CAPX Enterprise" height="70px"/> */}
         </div>
 
         {/* Profile Picture */}
         <div className="pflex-row pflex-center pt+ pb+">
-          <img src={profilePhoto} alt="" height="90px" style={{borderRadius: '50%'}}/>
+          {/* <img src={profilePhoto} alt="" height="90px" style={{borderRadius: '50%'}}/> */}
         </div>
 
         <hr className="ml+ mr+ mt+ mb+" />
